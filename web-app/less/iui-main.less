@@ -124,29 +124,31 @@ body.landscape > .toolbar > h1 {
 .redButton,
 .grayButton {
     display: block;
-    border-width: 0 12px;
-    padding: 10px;
+    border-width: 0px;
     text-align: center;
     font-size: 20px;
     text-decoration: inherit;
     color: inherit;
+    width: 50%;
+    float: left;
+    color: #157dfb;
+    border: 1px solid #B7B7B7;
+    margin-right: -1px;
+    border-left: 0;
+    padding: 10px 0;
 }
 
 /* TG */ .grayButton[selected], .grayButton:active,
 .whiteButton {
-    text-shadow: rgba(255, 255, 255, 0.7) 0 1px 0;
 /* TG */ background:transparent !important;
 }
 
 .redButton {
 /* TG */ background:transparent !important;
-    color:#fff;
-    text-shadow: #7a0001 0 -1px 0;
 }
 
 /* TG */ .whiteButton[selected], .whiteButton:active,
 .grayButton {
-    color: #FFFFFF;
 /* TG */ background:transparent !important;
 }
 
@@ -331,60 +333,29 @@ fieldset > .row:last-child {
 }
 
 .toggle {
-    border: 1px solid #888888;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    font-size: 19px;
-    font-weight: bold;
-    line-height: 30px;
 }
 
 .toggle[toggled="true"] {
-    border: 1px solid #143fae;
 }
 
 .toggleOn {
-    display: none;
-    position: absolute;
-    width: 60px;
-    text-align: center;
-    left: 0;
-    top: 0;
-    color: #FFFFFF;
-    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 0;
+  display:none;
 }
 
 .toggleOff {
-    position: absolute;
-    width: 60px;
-    text-align: center;
-    right: 0;
-    top: 0;
-    color: #666666;
+  display:none;
 }
 
 .toggle[toggled="true"] > .toggleOn {
-    display: block;
 }
 
 .toggle[toggled="true"] > .toggleOff {
-    display: none;
 }
 
 .thumb {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    width: 40px;
-    height: 28px;    
-    border: 1px solid #888888;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
 }
 
 .toggle[toggled="true"] > .thumb {
-    left: auto;
-    right: -1px;
 }
 
 .panel > h2 {
