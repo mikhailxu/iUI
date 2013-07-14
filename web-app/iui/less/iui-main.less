@@ -13,7 +13,8 @@ body {
     -webkit-text-size-adjust: none;
 }
 
-body > *:not(.toolbar) {
+body > *:not(.toolbar),
+.navroot > *:not(.toolbar){
     display: none;
     position: absolute;
     margin: 0;
@@ -29,13 +30,16 @@ body > *:not(.toolbar) {
     border-top: 1px solid #B7B7B7;
 }
 
-body.landscape > *:not(.toolbar) {
+body.landscape > *:not(.toolbar),
+body.landscape .navroot > *:not(.toolbar){
     height: auto;
     min-height: 400px;
     z-index:15;
 }
 
-body > *[selected="true"] {
+body > *[selected="true"],
+body > *[shown="true"],
+.navroot > *[shown="true"] {
     display: block;
 }
 
@@ -156,7 +160,7 @@ body.landscape > .toolbar > h1 {
 /************************************************************************************************/
 
 body > ul > li, .panel > ul li,
-.row{
+.row, .navroot > ul > li{
     position: relative;
     margin: 0;
     font-size: 17px;
@@ -166,7 +170,8 @@ body > ul > li, .panel > ul li,
     border-bottom: 1px solid #E0E0E0;
 }
 
-body > ul > li.group {
+body > ul > li.group,
+.navroot > ul > li.group{
     position: relative;
     top: -1px;
     border-top: 1px solid 
@@ -179,12 +184,14 @@ body > ul > li.group {
     border-bottom: 0;
 }
 
-body > ul > li.group:first-child {
+body > ul > li.group:first-child,
+.navroot > ul > li.group:first-child{
     top: 0;
     border-top: none;
 }
 
-body > ul > li > a {
+body > ul > li > a,
+.navroot > ul > li > a{
     display: block;
     text-decoration: none;
     color: inherit;
@@ -208,7 +215,8 @@ a[target="_replace"] {
 
 /************************************************************************************************/
     
-body > .dialog {
+body > .dialog,
+.navroot > .dialog{
     top: 0;
     width: 100%;
     min-height: 417px;
@@ -267,7 +275,8 @@ input:not([type|=submit]):not([type|=radio]):not([type|=checkbox]) {
 
 /************************************************************************************************/
 
-body > .panel {
+.navroot > .panel,
+body > .panel{
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

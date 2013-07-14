@@ -1,5 +1,6 @@
 /* default-theme.css (c) 2007-2012 by iUI Project Members, see LICENSE.txt for license */
-body {
+body,
+.navroot {
     color: #000000;
 }
 
@@ -13,7 +14,8 @@ li > a[selected="progress"] {
 
 /************************************************************************************************/
 
-body > .toolbar {
+body > .toolbar,
+.navroot > .toolbar{
     background: #f8f8f8;
 }
 
@@ -46,7 +48,8 @@ body > .toolbar {
 body > ul > li.group {
 }
 
-body > ul > li > a {
+body > ul > li > a,
+.navroot > ul > li > a{
     background: url(themes/seven/images/rightarrow.png) no-repeat 98% center;
     background-size: 8px;
 }
@@ -58,7 +61,8 @@ body > ul > li > a {
 
 /************************************************************************************************/
 
-body > .panel {
+body > .panel 
+.navroot > .panel{
     background: #e5e5e5;
 }
 
